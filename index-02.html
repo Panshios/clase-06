@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;700&display=swap');
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Josefin Sans', sans-serif;}
+canvas { display: block;}
+    </style>
+    <title>The second page</title>
+  </head>
+  <body>
+      <h1></h1>
+      <script>
+      var nombres = {
+          estudiantes: ["Camila Azócar", "María Paz Concha", "Olga F. Vio", "Trinidad González", "Matías Hagen", "María Francisca Hepp", "María Eliana Infante", "Magdalena Labarca", "Elsa Mora", "Vanessa Müller", "Jana Müller", "Muriel Muñoz", "María Trinidad Noriega", "Rosario Olivares", "Amparo Ortúzar", "Valeria Parraguéz", "Francisco Pezoa", "Francisca Purcell", "Martina Rivas", "Pilar Saavedra", "Lisa Saez", "David Sánchez", "Cecilia Soto", "María Elisa Valdés", "Francisca Vial", "María José Villasante"],
+            profesor: "Felipe Cortez"
+        }
+      var uwus = [" uwu", " owo", " eue", " ewe", " AwA", " ùwú", " ;-;"] //cachando un poco más sobre arrays 
+      var k = 170; // modificador de color post click
+      var p = 0; //skadaddle skadoodle tu circulo si p = 1 es cuadrado >:3
+      var painting = 255; //if pero con 255 porque si, si es 255 pinta, si mantienes presionado control deja de pintar porque da 0 uwu
+function setup() {
+ createCanvas(windowWidth, windowHeight).position(0, 0).style('z-index', -1);
+              //modificar lo siguiente para que aparezca su nombre y apellido, con consulta a la variable nombres
+            document.getElementsByTagName("h1")[0].append(nombres.estudiantes[16] + " en cuarentena" + uwus[5]); //me llama la 5 ' ùwú '
+            //modificar el siguiente mensaje
+            console.log("Pos precisamente este mensaje se puede ver en la consola que cosas no?");
+  colorMode(HSB,360,100,100)
+  background(10,90,50);  
+}
+  function mouseClicked() {
+            if (k === 170) {
+                k = random(360);
+                p = 1;
+            } else {
+                k = 170;
+                p = 0;
+            }
+        }
+  function keyPressed() {
+  if (keyCode === CONTROL) {
+    painting = 0;
+  } else {    
+    painting = 255;
+  }}
+    function keyReleased() {
+  if (keyCode === CONTROL) {
+    painting = 255;
+  } else {    
+    return false;
+  }}
+  function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+            colorMode(HSB,360,100,100)
+            background(10,90,50);
+        }
+function draw() {
+  var gam = 20*random(1,4);
+  fill(random(k,k+random(0,65)),20,100);
+  noStroke();
+if (painting === 255){
+  if (p === 0){
+      ellipse(mouseX,mouseY,gam+movedX,gam+movedX);
+  }
+  else {
+      square(mouseX-(gam+movedX)/2,mouseY-(gam+movedX)/2,gam+movedX);
+  }
+}
+}
+      </script>
+  </body>
+</html>
