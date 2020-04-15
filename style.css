@@ -28,10 +28,13 @@ div {
 h1, p {
     padding: 0.25rem;
 }
+/*una pequeña trampilla para index 5 >:3; */
 middletext {
         position: absolute;
         margin: auto;
-            right: 45%;
-            top: 45%;
+            text-align:center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 99999;
 }
