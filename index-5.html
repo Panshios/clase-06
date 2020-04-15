@@ -5,46 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-        }
-        
-        select {
-            position: absolute;
-            right: 1%;
-            top: 2%;
-            z-index: 99999;
-        }
-        middletext {
-        position: absolute;
-        margin: auto;
-            right: 45%;
-            top: 45%;
-            z-index: 99999;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>DNO037</title>
 </head>
 
 <body>
 
-    <select onchange="if (this.value) window.location.href=this.value">
-        <option value="index.html" selected>Portada &rarr; index.html</option>
-        <option value="graph.html">Gráfico &rarr; graph.html</option>
-        <option value="mapa.html">Mundial &rarr; mapa.html</option>
-
-    </select>
+        <select onchange="if (this.value) window.location.href=this.value">
+            <option value="index.html" >Portada &rarr; index.html</option>
+            <option value="index-1.html">Clase 01 &rarr; index-1.html</option>
+            <option value="index-2.html">Clase 02 &rarr; index-2.html</option>
+            <option value="index-3.html">Clase 03 - portada &rarr; index-3.html</option>
+            <option value="page-3.html">Clase 03 - página &rarr; page-3.html</option>
+            <option value="index-4.html">Clase 04 - portada &rarr; index-4.html</option>
+            <option value="page-4.html">Clase 04 - página &rarr; page-4.html</option>
+            <option value="index-5.html" selected>Clase 05 - portada &rarr; index-5.html</option>
+            <option value="graph-5.html">Clase 05 - gráfico &rarr; graph-5.html</option>
+            <option value="mapa-5.html">Clase 05 - mapa &rarr; mapa-5.html</option>
+        </select>
 
     <middletext>
     <h1>Bielorrusia</h1>

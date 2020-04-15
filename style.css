@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&display=swap');
 html, body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;}
+    canvas { display: block;}
 }
 
 select {
     position: absolute;
     right: 3%;
     top: 4%;
+    z-inex: 999999999999999999999999999;
 }
 
 canvas {
@@ -23,4 +27,11 @@ div {
 
 h1, p {
     padding: 0.25rem;
+}
+middletext {
+        position: absolute;
+        margin: auto;
+            right: 45%;
+            top: 45%;
+            z-index: 99999;
 }

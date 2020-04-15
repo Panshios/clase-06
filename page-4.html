@@ -19,7 +19,18 @@
 </head>
 
 <body>
-
+            <select onchange="if (this.value) window.location.href=this.value">
+            <option value="index.html">Portada &rarr; index.html</option>
+            <option value="index-1.html">Clase 01 &rarr; index-1.html</option>
+            <option value="index-2.html">Clase 02 &rarr; index-2.html</option>
+            <option value="index-3.html">Clase 03 - portada &rarr; index-3.html</option>
+            <option value="page-3.html">Clase 03 - página &rarr; page-3.html</option>
+            <option value="index-4.html">Clase 04 - portada &rarr; index-4.html</option>
+            <option value="page-4.html" selected>Clase 04 - página &rarr; page-4.html</option>
+            <option value="index-5.html">Clase 05 - portada &rarr; index-5.html</option>
+            <option value="graph-5.html">Clase 05 - gráfico &rarr; graph-5.html</option>
+            <option value="mapa-5.html">Clase 05 - mapa &rarr; mapa-5.html</option>
+        </select>
     <div id="mapamundi" style="width: 100vw; height: 100vh;"></div>
     <script>
         var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson"; //La estructura de este GeoJSON se explica en https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
@@ -31,8 +42,6 @@
         }
 
         function setup() {
-            createElement('p','<a href="index.html">ir a index.html</a>').position(windowWidth-100,0).style('z-index','9999');
-            console.log(temblores);
 
             /* 
             Con p5.js vamos por los datos del JSON, imprimimos en la consola el contenido de la variable que recibe esos datos y lo que sigue se resuelve mediante Leaflet.js. Con un ciclo for() se marcan distintos círculos rojos semiopacos (cuando se ve más rojo es coincidencia de epicentro, porque es un círculo sobre otro), cuyo radio depende del epicentro multiplicándose por 25000 (que no es lo más adecuado porque las magnitudes no implican crecimiento lineal sino exponencial)
